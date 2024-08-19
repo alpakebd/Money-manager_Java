@@ -112,10 +112,9 @@ public class PieChartUI extends JFrame{
         gbc.fill = GridBagConstraints.BOTH;
         chartPanelContainer.add(chartPanel, gbc);
     
-        // Add the custom income circle panel on top of the pie chart
         JPanel incomeCirclePanel = createIncomeCirclePanel();
-        incomeCirclePanel.setOpaque(false); // Ensure the panel is not opaque
-        incomeCirclePanel.setPreferredSize(new Dimension(150, 150)); // Increase preferred size
+        incomeCirclePanel.setOpaque(false);
+        incomeCirclePanel.setPreferredSize(new Dimension(150, 150)); 
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0; 
@@ -426,7 +425,7 @@ public class PieChartUI extends JFrame{
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 String income = getUserIncome();
-                int diameter = 150; // Increase diameter
+                int diameter = 150; 
                 int radius = diameter / 2;
                 int x = (getWidth() - diameter) / 2;
                 int y = (getHeight() - diameter) / 2;
